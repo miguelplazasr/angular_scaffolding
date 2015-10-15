@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name appAlApp
+ * @name alApp
  * @description
- * # appAlApp
+ * # alApp
  *
  * Main module of the application.
  */
 angular
-    .module('appAlApp', [
+    .module('alApp', [
         'ngAnimate',
         'ngAria',
         'ngCookies',

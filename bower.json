@@ -21,7 +21,7 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "appAlApp",
+  "moduleName": "alApp",
   "overrides": {
     "bootstrap": {
       "main": [

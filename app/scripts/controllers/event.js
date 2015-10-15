@@ -1,4 +1,4 @@
-angular.module('appAlApp')
+angular.module('alApp')
     .controller('EventListController', [
         '$scope',
         'events',
@@ -19,7 +19,7 @@ angular.module('appAlApp')
     ]);
 
 
-angular.module('appAlApp')
+angular.module('alApp')
     .controller('EventShowController', [
         '$scope',
         '$routeParams',
@@ -49,7 +49,7 @@ angular.module('appAlApp')
         }
     ]);
 
-angular.module('appAlApp')
+angular.module('alApp')
     .controller('LocationController', [
         '$scope',
         'MarkersResource',
