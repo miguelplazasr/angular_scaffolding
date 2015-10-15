@@ -10,7 +10,8 @@
  }
  }]);
  */
-app.factory('events', function($resource) {
+angular.module('appAlApp')
+    .factory('events', function($resource) {
 
     var EventsResource = $resource('http://sip.pulsarit.co/api/events/:id');
 
@@ -24,7 +25,8 @@ function Marker()
     this.markerArray = '';
 }
 
-app.factory('MarkersResource', ['$resource', function($resource) {
+angular.module('appAlApp')
+    .factory('MarkersResource', ['$resource', function($resource) {
     var url = 'http://sip.pulsarit.co/api/events/';
     var res = $resource(url, {}, {
         query: {

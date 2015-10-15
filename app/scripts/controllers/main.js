@@ -7,7 +7,8 @@
  * # MainCtrl
  * Controller of the appAlApp
  */
-app.controller('MainCtrl', function () {
+angular.module('appAlApp')
+  .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
