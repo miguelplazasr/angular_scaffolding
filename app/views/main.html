@@ -1,0 +1,35 @@
+<div class="main">
+
+  <h2>{{ promo }}</h2>
+
+  <!-- Angular Test -->
+  <div ng-cloak>
+    <div ng-show="loading">Cargando...</div>
+    <div ng-show="!loading && events.length == 0" class="title">No hay datos</div>
+    <div ng-repeat-start="event in events track by event.event.id " class="col-md-6">
+      <div class="thumbnail">
+        <img ng-src="" src="images/event.jpg">
+        <p class="title">{{ event.event.nombre }}</p>
+        <p class="price"><i class="ace-icon fa fa-users bigger-130"></i> {{ event.registrants }}</p>
+        <p class="date">{{ event.event.inicio | date }} </p>
+
+        <div class="rating">
+          <a class="likes"  ng-href="#/event/{{ event.event.id }}"><i class="fa fa-map-marker"></i> </a>
+          <p class="likes" ng-click="isCollapsed = !isCollapsed"><i class="fa fa-search"></i> </p>
+          <p class="likes" ng-click="minusOne($index)"><i class="fa fa-user-plus"></i> </p>
+        </div>
+        <hr>
+        <div uib-collapse="isCollapsed">
+          <div class="well well-lg">
+            <p class="date">Detalles : <br>{{ event.event.details }} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="$odd" style="clear: both;"></div>
+    <div ng-repeat-end></div>
+
+  </div>
+
+  <hr>
+</div>

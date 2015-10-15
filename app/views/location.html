@@ -1,0 +1,35 @@
+<div class="main">
+    <h2>{{ title }}</h2>
+
+    <ui-gmap-google-map
+            class="col-md-12"
+            center="map.center"
+            zoom="map.zoom"
+            draggable="false"
+            options="map.options">
+        <ui-gmap-markers models="map.markers"
+                         doCluster="true"
+                         coords="'self'"
+                         icon="'icon'"
+                         options="'options'"
+                         idkey='id'
+                         clusterOptions='map.clusterOptions'
+                         events="map.markersEvents "
+                         isLabel='true'>
+            <ui-gmap-window
+                    show="map.window.show"
+                    coords="map.window.model"
+                    options="map.window.options"
+                    closeClick="map.window.closeClick()">
+                <div >
+                    <p>{{ map.window.title }}</p>
+                    <p>{{ map.window.inicio | date }}</p>
+                    <p><a class="btn btn-primary" ng-href="#/event/{{ map.window.model.id }}"><i class="fa fa-eye"></i> Ver Evento</a></p>
+                </div>
+            </ui-gmap-window>
+        </ui-gmap-markers>
+
+    </ui-gmap-google-map>
+
+    <div class="clearfix"></div>
+</div>

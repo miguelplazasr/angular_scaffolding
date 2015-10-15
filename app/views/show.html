@@ -1,0 +1,31 @@
+<div class="main">
+    <h1> {{ detail.nombre }} </h1>
+    <!--<h2> {{ detail.inicio | date:'medium' }} -> {{ detail.fin | date:'medium' }}</h2>-->
+    <img ng-src="">
+
+    <div class="col-md-6 ">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>Inicio : {{ detail.inicio | date:'medium' }}</p>
+
+                <p>Fin : {{ detail.fin | date:'medium' }}</p>
+
+                <p>Ubicaci&oacute;n : {{ detail.ubicacion }}</p>
+
+                <p>Detalles : {{ detail.details }}</p>
+
+            </div>
+        </div>
+    </div>
+    <ui-gmap-google-map class="col-md-6"
+                        center='map.center'
+                        zoom='map.zoom'
+                        draggable="false"
+                        options="map.options">
+        <ui-gmap-marker
+                idkey="marker.id"
+                coords="marker.coords"
+                ></ui-gmap-marker>
+    </ui-gmap-google-map>
+    <div class="clearfix"></div>
+</div>
